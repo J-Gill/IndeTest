@@ -1,0 +1,29 @@
+{
+  "name": "indetest",
+  "version": "1.0.0",
+  "description": "Cucumber Testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/J-Gill/IndeTest.git"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "JGill",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/J-Gill/IndeTest/issues"
+  },
+  "homepage": "https://github.com/J-Gill/IndeTest#readme",
+  "devDependencies": {
+    "cucumber": "^6.0.5",
+    "grunt": "^1.1.0",
+    "grunt-cucumber": "^0.3.0",
+    "selenium-webdriver": "^4.0.0-alpha.7"
+  },
+  "dependencies": {}
+}
