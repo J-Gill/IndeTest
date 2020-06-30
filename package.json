@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/J-Gill/IndeTest#readme",
   "devDependencies": {
+    "chai": "^4.2.0",
+    "chromedriver": "^83.0.0",
     "cucumber": "^6.0.5",
     "grunt": "^1.1.0",
     "grunt-cucumber": "^0.3.0",
