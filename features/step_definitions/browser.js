@@ -9,12 +9,12 @@ const capabilities = Capabilities.chrome();
 capabilities.set('chromeOptions', { "w3c": false });
 const driver = new Builder().withCapabilities(capabilities).build();
 
-Given('I am on the Google search page', async function () {
-    await driver.get('http://www.google.com');
+Given('I am on the IndeJuice home page', async function () {
+    await driver.get('https://indejuice.com/');
 });
 
 When('I search for {string}', async function (searchTerm) {
-    const element = await driver.findElement(By.name('q'));
+    const element = await driver.findElement(By.id('MainSearchInputA'));
     element.sendKeys(searchTerm, Key.RETURN);
     element.submit();
 });
@@ -29,13 +29,16 @@ AfterAll('end', async function(){
     await driver.quit();
 });
 
+
 After(function (scenario) {
     if (scenario.result.status === "failed") {
         var world = this;
         return driver.takeScreenshot().then(function(screenShot, error) {
             if (!error) {
-                world.attach(screenShot, "image/png");
+                //world.attach(screenShot, "image/png");
+
             }
         });
     }
-});
+}); 
+
