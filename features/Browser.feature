@@ -1,14 +1,16 @@
 @smoke
 Feature: Add to Basket
-  Browser testing
+  Search flavour, verify and select top result to add to basket
 
 
-Scenario Outline: Finding some cheese
+Scenario Outline: Selecting Products
    Given I am on the IndeJuice home page
    When I search for "<flavour>"
-   Then the page title should start with "<answer>"
+   Then products should be loaded
+   Then the first item name should be "<firstItemName>"
    
 Examples:
-    | flavour     | answer |
-    | mango       | lol    |
-    | strawberry  | lol    |
+    | flavour     | firstItemName | 
+    | mango       | Mango       |
+    | mango       | fish        |
+    | strawberry  | strawberry  |
