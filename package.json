@@ -4,7 +4,7 @@
   "description": "Cucumber Testing",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "./node_modules/.bin/cucumber-js"
   },
   "repository": {
     "type": "git",
