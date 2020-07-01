@@ -9,4 +9,4 @@ To run, either:
 
 or
 
-mvn test
+npm test
