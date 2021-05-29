@@ -11,7 +11,7 @@ capabilities.set('chromeOptions', { "w3c": false });
 const driver = new Builder().withCapabilities(capabilities).build();
 
 Given('I am on the IndeJuice home page', async function () {
-    await driver.get('https://indejuice.com/');
+    await driver.get('https://indejuice.local/');
 });
 
 When('I search for {string}',  async function (searchTerm) {
