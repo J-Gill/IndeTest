@@ -1,5 +1,5 @@
+const { Given, When, Then, After, AfterAll } = require('@cucumber/cucumber');
 const assert = require('assert');
-const { Given, When, Then, After, AfterAll } = require('cucumber');
 const { Builder, By, Capabilities, Key } = require('selenium-webdriver');
 const { expect } = require('chai');
 
@@ -11,7 +11,7 @@ capabilities.set('chromeOptions', { "w3c": false });
 const driver = new Builder().withCapabilities(capabilities).build();
 
 Given('I am on the IndeJuice home page', async function () {
-    await driver.get('http://indejuice.local/uk/vape-store/');
+     driver.get('http://indejuice.local/uk/vape-store/');
 });
 
 When('I search for {string}',  async function (searchTerm) {
@@ -35,7 +35,7 @@ Then('the first item name should be {string}', {timeout: 60 * 1000}, async funct
     //expect(isTitleStartWithCheese).to.equal(true);
 });
 
-AfterAll('end', async function(){
+AfterAll(async function(){
     await driver.quit();
 });
 
